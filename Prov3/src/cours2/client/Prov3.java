@@ -15,7 +15,8 @@ import com.google.gwt.user.client.ui.RootLayoutPanel;
 import cours2.client.Proverbe;
 
 /**
- * Entry point classes define <code>onModuleLoad()</code>.
+ * ETAPE 5 = Utilisation de RPC et des services mis en place
+ * Entry point classes define <code>onModuleLoad()</code>. (EntryPoint classe = Equivalent du main dans un programme Java)
  */
 public class Prov3 implements EntryPoint  {
     private static final String SERVER_ERROR = "Impossible d'établir la connexion avec le serveur.";
@@ -71,7 +72,7 @@ public class Prov3 implements EntryPoint  {
     }
 
     public void onModuleLoad() {
-	tb = new TabLayoutPanel(5, Unit.EM);
+	tb = new TabLayoutPanel(10, Unit.EM);
 	
 	creePageLire();
 	creePageEcrire();
@@ -80,7 +81,7 @@ public class Prov3 implements EntryPoint  {
 
 	tb.add(pageLire, "Lire les proverbes");
 	tb.add(pageEcrire, "Ajouter des proverbes");
-	RootLayoutPanel.get().add(new HTML("<h1>Proverbes</h1>"));
+	RootLayoutPanel.get().add(new HTML("<h1>Lire et créer des proverbes</h1>"));
 	RootLayoutPanel.get().add(tb);
     }
 

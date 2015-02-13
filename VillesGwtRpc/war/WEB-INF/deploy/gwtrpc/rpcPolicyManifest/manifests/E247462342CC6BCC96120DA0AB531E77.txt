@@ -1,0 +1,2 @@
+serviceClass: coreservlets.client.DataService
+path: 0D9ABDF2B7045F90F116EE30E8A67796.gwt.rpc

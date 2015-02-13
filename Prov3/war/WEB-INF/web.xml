@@ -5,7 +5,7 @@
          version="2.5"
          xmlns="http://java.sun.com/xml/ns/javaee">
 
-  <!-- Servlets -->
+  <!-- ETAPE 4 = Déclaration des Servlets et Mapping -->
   <servlet>
     <servlet-name>proverbesServlet</servlet-name>
     <servlet-class>cours2.server.ProverbesServImpl</servlet-class>
@@ -13,6 +13,7 @@
   
   <servlet-mapping>
     <servlet-name>proverbesServlet</servlet-name>
+    <!-- nom "provServ" que l'on a déclaré dans ProverbesServ @RemoteServiceRelativePath("provServ") -->
     <url-pattern>/prov3/provServ</url-pattern>
   </servlet-mapping>
   
