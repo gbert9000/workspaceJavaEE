@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+	<style>
+		.formTable{ border : 1px solid green;}
+		.erreur{color:red;}
+		.texte{background-color: pink;}
+	</style>
+</h:head> 
+<body> 
+	<h:form>
+		<h:panelGrid columns="2" styleClass="formTable">
+			Nom :<h:inputText styleClass="texte" id="saisieNom" value="#{personne.nom}" required="true" requiredMessage="Le nom est obligatoire"/>
+			Age :<h:inputText styleClass="texte" id="saisieAge" value="#{personne.age}" required="true" 
+			requiredMessage="L'âge est obligatoire" converterMessage="Age incorrect, l'âge doit être un nombre entier"
+			validatorMessage="l'âge doit être compris entre 1 et 100">
+				<f:validateLongRange minimum="1" maximum="100"></f:validateLongRange>
+			</h:inputText>
+			<h:commandButton action="#{personne.creerPersonne}" value="Créer Personne" />
+		</h:panelGrid>
+				<h:messages styleClass="erreur"/>
+
+
+	</h:form>
+</body> 
+</html>

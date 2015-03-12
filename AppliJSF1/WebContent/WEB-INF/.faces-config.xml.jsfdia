@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#Page1.xhtml" PATH="/Page1.xhtml"
+  SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#Page1.xhtml:0" NAME="item"
+   PATH="/Page1.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="#resultat::#resultatMineur.xhtml"
+    NAME="output" PATH="/resultatMineur.xhtml"
+    TARGET="rules:#resultatMineur.xhtml" TITLE="/resultat" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="#resultat::#resultatMajeur.xhtml"
+    NAME="output1" PATH="/resultatMajeur.xhtml"
+    TARGET="rules:#resultatMajeur.xhtml" TITLE="/resultat" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#resultatMajeur.xhtml"
+  PATH="/resultatMajeur.xhtml" SHAPE="256,177,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#resultatMineur.xhtml"
+  PATH="/resultatMineur.xhtml" SHAPE="256,33,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:*" PATH="*" SHAPE="32,273,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:*:0" NAME="item" PATH="*" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="erreur::#erreur.xhtml" NAME="output"
+    PATH="/erreur.xhtml" TARGET="rules:#erreur.xhtml" TITLE="erreur" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#erreur.xhtml" PATH="/erreur.xhtml"
+  SHAPE="240,289,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>
